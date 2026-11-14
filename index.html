@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101216">
+  <title>MY OS</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">MY <span>OS</span></div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">TON ESPACE</p>
+      <h1>On commence<br><span>petit.</span></h1>
+      <p class="sub">Pas besoin d’être motivé. Choisis juste la prochaine action.</p>
+    </section>
+
+    <section class="panel focus-panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MAINTENANT</p>
+          <h2>Une seule priorité</h2>
+        </div>
+        <span class="dot"></span>
+      </div>
+      <p id="focusText" class="focus-text">Aucune priorité définie.</p>
+      <div class="actions">
+        <button class="primary" id="startBtn">Je m’y mets · 2 min</button>
+        <button class="quiet" id="changeFocusBtn">Modifier</button>
+      </div>
+      <div id="timerBox" class="timer hidden">
+        <strong id="timer">02:00</strong>
+        <p>Fais seulement le premier pas. Tu peux arrêter après 2 minutes.</p>
+        <button class="quiet" id="stopBtn">Terminer la session</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">À NE PAS OUBLIER</p>
+          <h2>Mon pense-bête</h2>
+        </div>
+        <span class="count" id="taskCount">0</span>
+      </div>
+      <form id="taskForm">
+        <input id="taskInput" maxlength="90" placeholder="Ex. revoir le cours de chimie" autocomplete="off" required>
+        <button class="add" aria-label="Ajouter">+</button>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+      <p class="hint">Note ce qui te traverse l’esprit. Pas besoin de tout faire aujourd’hui.</p>
+    </section>
+
+    <section class="panel checkin">
+      <p class="eyebrow">PETIT BILAN</p>
+      <h2>Qu’est-ce qui te bloque ?</h2>
+      <div class="block-options">
+        <button data-block="Je n’ai pas envie">Pas envie</button>
+        <button data-block="Je ne sais pas par où commencer">Je ne sais pas commencer</button>
+        <button data-block="Je suis fatigué">Fatigue</button>
+        <button data-block="Je manque de temps">Pas le temps</button>
+      </div>
+      <p id="blockReply" class="hint" aria-live="polite">Choisis une réponse. On cherchera une action adaptée.</p>
+    </section>
+
+    <footer>MY OS <span>·</span> Ta vie, un pas à la fois.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
