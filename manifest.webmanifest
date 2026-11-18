@@ -1,0 +1,9 @@
+{
+  "name": "MY OS",
+  "short_name": "MY OS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101216",
+  "theme_color": "#101216",
+  "description": "Planning, rappels et progression personnels."
+}

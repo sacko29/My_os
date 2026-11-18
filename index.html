@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101216"><title>MY OS</title>
+<link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+<header><div class="brand">MY <span>OS</span></div><div id="today" class="muted"></div></header>
+<section class="hero"><p class="eyebrow">TON ESPACE PERSONNEL</p><h1>Avance<br><span>un pas à la fois.</span></h1><p class="muted">Ton planning, tes rappels et tes progrès au même endroit.</p></section>
+<nav class="tabs"><button class="tab active" data-tab="home">Aujourd'hui</button><button class="tab" data-tab="planning">Planning</button><button class="tab" data-tab="progress">Progression</button><button class="tab" data-tab="settings">Réglages</button></nav>
+<section id="home" class="view active">
+<div class="panel"><p class="eyebrow">PRIORITÉ DU JOUR</p><h2 id="todayTitle">Ta prochaine action</h2><p id="todayAdvice" class="muted">Choisis une petite action et commence.</p><button id="focusBtn" class="primary">Définir ma priorité</button></div>
+<div class="panel"><div class="head"><div><p class="eyebrow">À FAIRE AUJOURD'HUI</p><h2>Mes tâches</h2></div><b id="taskCount" class="accent">0</b></div>
+<form id="taskForm"><input id="taskInput" maxlength="100" placeholder="Ajouter une tâche…" required><button class="primary add">+</button></form><ul id="tasks" class="tasks"></ul></div>
+<div class="panel"><p class="eyebrow">RESTITUTION À PRÉPARER</p><h2 id="nextPrepTitle">—</h2><p id="nextPrepText" class="muted">—</p><button id="prepDone" class="quiet">Marquer comme prêt</button></div>
+</section>
+<section id="planning" class="view">
+<div class="panel"><p class="eyebrow">COURS HEBDOMADAIRES</p><h2>Emploi du temps</h2><div id="courses"></div></div>
+<div class="panel"><p class="eyebrow">RESTITUTIONS</p><h2>Préparer la veille</h2><div id="restitutions"></div></div>
+</section>
+<section id="progress" class="view">
+<div class="panel"><p class="eyebrow">TES REPÈRES</p><h2>Progression</h2><div class="stats"><div><b id="doneStat">0</b><span>Terminées</span></div><div><b id="startStat">0</b><span>Commencées</span></div><div><b id="xpStat">0</b><span>XP</span></div><div><b id="streakStat">0</b><span>Jours actifs</span></div></div><div class="bar"><i id="progressBar"></i></div><p id="progressText" class="muted">Chaque petit démarrage compte.</p></div>
+</section>
+<section id="settings" class="view">
+<div class="panel"><p class="eyebrow">RAPPELS</p><h2>Choisir mes heures</h2><label>Rappel de révision <input type="time" id="prepTime" value="18:00"></label><label>Rappel des tâches du jour <input type="time" id="dailyTime" value="08:00"></label><label>Rappel de bilan <input type="time" id="reviewTime" value="20:30"></label><button id="saveTimes" class="primary full">Enregistrer les heures</button><button id="allowNotifications" class="quiet full">Autoriser les notifications</button><p id="notifStatus" class="muted">Les notifications locales nécessitent la version Android.</p></div>
+<div class="panel"><p class="eyebrow">APPLICATION</p><h2>À propos et mises à jour</h2><p>Version installée : <b id="versionLabel">0.3.0</b></p><p id="updateStatus" class="muted">Vérifie si une nouvelle version est disponible.</p><button id="exportData" class="quiet full">Exporter ma sauvegarde</button><label class="importLabel">Importer une sauvegarde <input type="file" id="importData" accept="application/json"></label><button id="checkUpdate" class="quiet full">Vérifier les mises à jour</button><button id="openRelease" class="primary full hidden">Voir la mise à jour</button><p class="muted small">Les mises à jour Android sont confirmées par Android. MY OS ne peut pas installer un APK silencieusement.</p></div>
+</section>
+<footer>MY OS · Tes données restent sur cet appareil.</footer>
+</main><script type="module" src="./app.js"></script>
+</body></html>
